@@ -1,0 +1,8 @@
+trigger:
+- canary
+pool: dashboard
+steps:
+  - script: |
+      docker image build -t gopivurata/az-react-storefront:DEV .
+      docker image push gopivurata/az-react-storefront:DEV
+    
